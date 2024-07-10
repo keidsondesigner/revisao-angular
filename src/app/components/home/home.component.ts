@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { filter, map, of, tap } from 'rxjs';
 import { ProdutoService } from 'src/app/features/produto/services/produto.service';
 
 export interface PeriodicElement {
@@ -29,7 +30,18 @@ export class HomeComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
-  constructor(private produtoService: ProdutoService) { }
+  frutas: string[] = [];
+
+  constructor(private produtoService: ProdutoService) {
+    of('banana', 'morango', 'abacaxi', 'melancia', 'pera').pipe(
+      tap(console.log),
+      map((fruta) => fruta.toUpperCase()),
+      tap(console.log),
+      filter((fruta) => fruta.startsWith('B') || fruta.startsWith('M')),
+    ).subscribe( resultado => {
+      this.frutas.push(resultado);
+    });
+  }
 
   ngOnInit() {
     this.produtoService.getCEP('69058582').subscribe(

@@ -1,3 +1,10 @@
+<h1>Resultado Filtrado do Observable</h1>
+<ul>
+  <li *ngFor="let fruta of frutas">
+    {{fruta}}
+  </li>
+</ul>
+
 <table mat-table [dataSource]="dataSource">
   <!-- Position Column -->
   <ng-container matColumnDef="position">
