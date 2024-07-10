@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'revisao-angular';
+  imgUrl = 'https://angular.io/assets/images/logos/angular/angular.svg';
 
   // Primeiro método executado do componente
   constructor() { }
@@ -42,5 +43,9 @@ export class AppComponent {
 
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
+  }
+
+  chamarFuncao() {
+    console.log('chamar evento');
   }
 }

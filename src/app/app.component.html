@@ -1,3 +1,9 @@
-<h1>Hello World</h1>
+<h1>{{title}}</h1>
+<input type="text" [(ngModel)]="title">
+<br>
+<br>
+<button (click)="chamarFuncao()">chamar evento</button>
+
+<img style="width: 100px;" [src]="imgUrl">
 
 <router-outlet></router-outlet>
