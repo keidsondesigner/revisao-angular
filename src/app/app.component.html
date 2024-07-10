@@ -1,9 +1,19 @@
-<h1>{{title}}</h1>
+<h1 *ngIf="showTitle; else naotemTexto">{{title}}</h1>
+<ng-template #naotemTexto>
+  <h1>nao tem texto</h1>
+</ng-template>
+
 <input type="text" [(ngModel)]="title">
 <br>
 <br>
 <button (click)="chamarFuncao()">chamar evento</button>
 
 <img style="width: 100px;" [src]="imgUrl">
+
+<div *ngFor="let item of clientes">
+  id: {{item.id}} / nome: {{item.nome}} / idade: {{item.idade}}
+  <br>
+  <br>
+</div>
 
 <router-outlet></router-outlet>

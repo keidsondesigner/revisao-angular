@@ -8,7 +8,26 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'revisao-angular';
+  showTitle = true;
   imgUrl = 'https://angular.io/assets/images/logos/angular/angular.svg';
+
+  clientes = [
+    {
+      id: 1,
+      nome: 'João',
+      idade: 25
+    },
+    {
+      id: 2,
+      nome: 'Pedro',
+      idade: 10
+    },
+    {
+      id: 3,
+      nome: 'Arthur',
+      idade: 7
+    }
+  ]
 
   // Primeiro método executado do componente
   constructor() { }
