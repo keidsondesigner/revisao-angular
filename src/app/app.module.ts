@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { NovoComponent } from './components/novo/novo.component';
 import { ProdutoModule } from './features/produto/produto.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { ProdutoModule } from './features/produto/produto.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
-    ProdutoModule
+    ProdutoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
