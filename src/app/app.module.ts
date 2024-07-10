@@ -10,6 +10,7 @@ import { NovoComponent } from './components/novo/novo.component';
 import { ProdutoModule } from './features/produto/produto.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AppMaterialModule } from './shared/app-material/app-material.module';
     AppMaterialModule,
     FormsModule,
     ProdutoModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

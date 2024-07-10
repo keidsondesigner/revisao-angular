@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProdutoService } from 'src/app/features/produto/services/produto.service';
 
 export interface PeriodicElement {
   name: string;
@@ -27,4 +28,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class HomeComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
+  constructor(private produtoService: ProdutoService) { }
+
+  ngOnInit() {
+    this.produtoService.getCEP('69058582').subscribe(
+      (retorno) => console.log('AQUI', retorno)
+    );
+  }
 }
