@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { NovoComponent } from './components/novo/novo.component';
+import { ProdutoModule } from './features/produto/produto.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NovoComponent } from './components/novo/novo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ProdutoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
