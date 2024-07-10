@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NovoComponent } from './components/novo/novo.component';
 import { ProdutoModule } from './features/produto/produto.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './shared/app-material/app-material.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AppMaterialModule,
     FormsModule,
     ProdutoModule,
   ],
